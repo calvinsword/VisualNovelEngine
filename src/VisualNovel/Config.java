@@ -26,7 +26,7 @@ public class Config {
     public String sliderBackground = "res/Pictures/TextBox.png";
     public String sliderbar = "res/Pictures/Pictures/img.png";
 
-    public String optionsImage = "res/Pictures/Pictures/img.png";
+    public String optionsImage = "res/Pictures/Pictures/MC.png";
     public String optionsAnimation = null;
 
     ////////
@@ -63,7 +63,7 @@ public class Config {
     //EXTRA//
     /////////
     public String title = "Visual Novel";
-    public int animationSpeedInMilliseconds = 2000;
+    public int animationSpeedInMilliseconds = 800;
 
     // Private constructor to prevent instantiation
     private Config() {}

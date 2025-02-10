@@ -1,17 +1,24 @@
 { "story" : [
-  {"text" : "Hello World", "background" : "res/Pictures/Pictures/HelloWorld.png","music": "res/Sounds/Intro-1.wav"},
-  {"text" : "Hello World", "animation" : "INTRO1"},
-  {"text" : "With this text i am demonstrating that it wil not draw the entire word but will split it in the textbox.","background" : "res/Pictures/Pictures/HelloWorld.png"},
-  {"text" : "With this text i am demonstrating that it wil not draw the entire word but will split it in the textbox.", "transitionAnimation" : "INTRO1","background" : "res/Pictures/Pictures/HelloWorld.png"},
-  {"text" : "TestTest",
-    "story option" : "what heh",
-    "story option link" : "res/Story2.json",
-    "story option image" : "res/Pictures/Pictures/HelloWorld.png",
-    "story option pressed image" : "res/Pictures/Pictures/img.png",
-    "story option1" : "second one",
-    "story option link1" : "res/Story3.json",
-    "story option2" : "aaaaaaaaa one",
-    "story option link2" : "res/Story4.json"
-  }
+  {"text" : "I stand here again, what once was a fun activity now made a grueling job with horrible hours.", "background" : "res/Pictures/Pictures/HelloWorld.png","music": "res/Sounds/Intro-1.wav"},
+  {"text" : "I work the night shift, I used to find it smart. Making money in the night instead of laying in bed awake.", "animation" : "INTRO1"},
+  {"text" : "the sound of all the talking makes me nauseous.","background" : "res/Pictures/Pictures/HelloWorld.png"},
+  {"text" : "Lets see if today is any better.", "transitionAnimation" : "INTRO1","background" : "res/Pictures/Pictures/HelloWorld.png"},
+  {"text" : "i taught working at a bar would help me with being more social."},
+  {"text" : "but i now just feel left out, an outcast at work. the favorite part is when i can work in solitude"},
+  {"text" : "surrounded by drunk guest but no coworkers around me."},
+  {"text" : "annoying guest i can handle, but seeing your colleges despise you always stings."},
+  {"text" : "i am often annoyed and furious with myself. Why cant i just be normal... talk normal."},
+  {"text" : "but i must focus on work so i can at least be useful in some regard."},
+  {"text" : "today is horrible....."},
+  {"text" : "(insert a transition to sitting at the end of work)"},
+  {"text" : "[in the corner of my eye i see a mouse walking]"},
+  {"text" : "i dont even know of that is a real one or that my sleep deprived mind playing tricks on me."},
+  {"text" : "its fascinating what a mind can do."},
+  {"text" : "it can create its own reality. Show things that are not real."},
+  {"text" : "this all began a while ago."},
+  {"text" : "."},
+  {"text" : "."},
+  {"text" : "."}
+
 ]
 }

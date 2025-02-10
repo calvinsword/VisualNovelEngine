@@ -253,9 +253,7 @@ public class GamePlayer {
             return;
         }
 
-        // Load the new story data
         List<StoryHolder> storyEntries = loadStoryTexts(JsonLink);
-        int[] currentTextIndex = {0};
         showGameContent(panel);
 
         if (storyEntries.isEmpty()) {

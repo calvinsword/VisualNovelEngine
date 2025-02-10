@@ -7,9 +7,9 @@ public enum AnimationHolder {
     // Enum constants with their associated frame paths
     //TODO: DONT MAKE THIS HARDCODED
     MAIN_MENU(new ArrayList<>(Arrays.asList(
-            "res/Pictures/Animations/MainScreen/img.png",
-            "res/Pictures/Animations/MainScreen/img_1.png",
-            "res/Pictures/Animations/MainScreen/img_2.png"
+            "res/Pictures/Animations/MainScreen/IntroScreen1.png",
+            "res/Pictures/Animations/MainScreen/IntroScreen2.png",
+            "res/Pictures/Animations/MainScreen/IntroScreen3.png"
     ))),
     INTRO1(new ArrayList<>(Arrays.asList(
             "res/Pictures/Animations/Intro1/img.png",
