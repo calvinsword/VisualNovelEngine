@@ -15,6 +15,11 @@ public enum AnimationHolder {
             "res/Pictures/Animations/Intro1/img.png",
             "res/Pictures/Animations/Intro1/img_1.png",
             "res/Pictures/Animations/Intro1/img_2.png"
+    ))),
+    OUTSIDE1(new ArrayList<>(Arrays.asList(
+            "res/Pictures/Animations/Outside1/Outside1.png",
+            "res/Pictures/Animations/Outside1/Outside2.png",
+            "res/Pictures/Animations/Outside1/Outside3.png"
     )));
 
 

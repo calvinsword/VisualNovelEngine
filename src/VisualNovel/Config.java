@@ -14,7 +14,6 @@ public class Config {
     /////////////
     //MAIN MENU//
     /////////////
-
     public String mainMenuImage = null;
     public String mainMenuAnimation = "MAIN_MENU";
 
@@ -22,7 +21,6 @@ public class Config {
     ///////////
     //OPTIONS//
     ///////////
-
     public String sliderBackground = "res/Pictures/TextBox.png";
     public String sliderbar = "res/Pictures/Pictures/img.png";
 
@@ -44,14 +42,14 @@ public class Config {
     //BUTTONS//
     ///////////
     public String buttonSound = "res/Sounds/TextSoundEffect.wav";
-    public String backButton = null;
-    public String backPressedButton = null;
-    public String optionsButton = null;
-    public String optionsPressedButton = null;
-    public String exitButton = null;
-    public String exitPressedButton = null;
-    public String beginButton = null;
-    public String beginPressedButton = null;
+    public String backButton = "res/Pictures/Buttons/BackNotPressed.png";
+    public String backPressedButton = "res/Pictures/Buttons/BackPressed.png";
+    public String optionsButton = "res/Pictures/Buttons/OptionsNotPressed.png";
+    public String optionsPressedButton = "res/Pictures/Buttons/OptionsPressed.png";
+    public String exitButton = "res/Pictures/Buttons/ExitNotPressed.png";
+    public String exitPressedButton = "res/Pictures/Buttons/ExitPressed.png";
+    public String beginButton = "res/Pictures/Buttons/BeginNotPressed.png";
+    public String beginPressedButton = "res/Pictures/Buttons/BeginPressed.png";
 
     /////////
     //SOUND//

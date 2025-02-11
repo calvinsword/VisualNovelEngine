@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Visual_Novel.iml" filepath="$PROJECT_DIR$/Visual_Novel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VisualNovelGameEngine.iml" filepath="$PROJECT_DIR$/VisualNovelGameEngine.iml" />
     </modules>
   </component>
 </project>
