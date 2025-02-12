@@ -60,8 +60,10 @@ public class Config {
     /////////
     //EXTRA//
     /////////
-    public String title = "Visual Novel";
+    public boolean ClickableTransistionAnimations = false;
+    public String title = "Asocial";
     public int animationSpeedInMilliseconds = 800;
+    public int transitionAnimationSpeedInMilliseconds = 100;
 
     // Private constructor to prevent instantiation
     private Config() {}

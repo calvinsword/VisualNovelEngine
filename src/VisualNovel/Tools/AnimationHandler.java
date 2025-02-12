@@ -20,6 +20,10 @@ public class AnimationHandler {
     public static boolean isTransitionPlaying = false;
 
     public static void animation(String animationEnum, JLayeredPane panel) {
+        int defaultSpeed = Config.getInstance().animationSpeedInMilliseconds;
+        playAnimation(animationEnum, panel, defaultSpeed);
+    }
+    public static void playAnimation(String animationEnum, JLayeredPane panel, int speed) {
         Config config = Config.getInstance();
         if (timer != null && timer.isRunning()) {
             timer.stop();
@@ -31,7 +35,7 @@ public class AnimationHandler {
         Game.setCurrentBackgroundImage(animationList.get(i[0]));
         panel.repaint();
 
-        timer = new Timer(config.animationSpeedInMilliseconds, new ActionListener() {
+        timer = new Timer(speed, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 i[0]++;
@@ -45,6 +49,7 @@ public class AnimationHandler {
         timer.start();
     }
 
+
     public static void playTransitionAnimation(String transitionEnum, String newBackground, String newAnimation, JLayeredPane panel) {
         if (transitionEnum == null) {
             updateScene(newBackground, newAnimation, panel);
@@ -52,19 +57,18 @@ public class AnimationHandler {
         }
 
         isTransitionPlaying = true;
-
         animationList = AnimationHolder.valueOf(transitionEnum).getFramePaths();
+
         if (animationList.isEmpty()) {
             isTransitionPlaying = false;
             updateScene(newBackground, newAnimation, panel);
             return;
         }
 
-        int frameCount = animationList.size();
-        int frameDuration = Config.getInstance().animationSpeedInMilliseconds;
-        int totalAnimationTime = frameCount * frameDuration;
+        int frameDuration = Config.getInstance().transitionAnimationSpeedInMilliseconds;
+        int totalAnimationTime = animationList.size() * frameDuration;
 
-        animation(transitionEnum, panel);
+        playAnimation(transitionEnum, panel, frameDuration);
 
         transitionTimer = new Timer(totalAnimationTime, evt -> {
             isTransitionPlaying = false;

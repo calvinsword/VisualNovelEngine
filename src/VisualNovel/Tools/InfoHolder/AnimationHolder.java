@@ -11,16 +11,29 @@ public enum AnimationHolder {
             "res/Pictures/Animations/MainScreen/IntroScreen2.png",
             "res/Pictures/Animations/MainScreen/IntroScreen3.png"
     ))),
-    INTRO1(new ArrayList<>(Arrays.asList(
-            "res/Pictures/Animations/Intro1/img.png",
-            "res/Pictures/Animations/Intro1/img_1.png",
-            "res/Pictures/Animations/Intro1/img_2.png"
+    WORK1(new ArrayList<>(Arrays.asList(
+            "res/Pictures/Animations/Work1/Work1.png",
+            "res/Pictures/Animations/Work1/Work2.png",
+            "res/Pictures/Animations/Work1/Work3.png"
+    ))),
+    WORK2(new ArrayList<>(Arrays.asList(
+            "res/Pictures/Animations/Work2/Work2-1.png",
+            "res/Pictures/Animations/Work2/Work2-2.png",
+            "res/Pictures/Animations/Work2/Work2-3.png"
     ))),
     OUTSIDE1(new ArrayList<>(Arrays.asList(
             "res/Pictures/Animations/Outside1/Outside1.png",
             "res/Pictures/Animations/Outside1/Outside2.png",
             "res/Pictures/Animations/Outside1/Outside3.png"
+    ))),
+    TRANSITION1(new ArrayList<>(Arrays.asList(
+            "res/Pictures/Transitions/Work-1ToWork-2/Transition1.png",
+            "res/Pictures/Transitions/Work-1ToWork-2/Transition2.png",
+            "res/Pictures/Transitions/Work-1ToWork-2/Transition3.png",
+            "res/Pictures/Transitions/Work-1ToWork-2/Transition4.png",
+            "res/Pictures/Transitions/Work-1ToWork-2/Transition5.png"
     )));
+
 
 
 

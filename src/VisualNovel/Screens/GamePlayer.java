@@ -102,9 +102,11 @@ public class GamePlayer {
         // Shared action to advance or skip text
         Runnable advanceText = () -> {
              {
-                 if(isTransitionPlaying){
-                     AnimationHandler.skipTransition(panel);
-                     isTransitionPlaying = false;
+                 if(config.ClickableTransistionAnimations) {
+                     if (isTransitionPlaying) {
+                         AnimationHandler.skipTransition(panel);
+                         isTransitionPlaying = false;
+                     }
                  }
                 if (!textDisplay[0].isAnimationComplete()) {
                     textDisplay[0].completeAnimation();

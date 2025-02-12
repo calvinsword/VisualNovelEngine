@@ -1,9 +1,11 @@
 { "story" : [
-  {"text" : "I stand here again, what once was a fun activity now made a grueling job with horrible hours.", "animation" : "OUTSIDE1","music": "res/Sounds/Intro-1.wav"},
-  {"text" : "I work the night shift, I used to find it smart. Making money in the night instead of laying in bed awake.", "animation" : "INTRO1"},
-  {"text" : "the sound of all the talking makes me nauseous.","background" : "res/Pictures/Pictures/HelloWorld.png"},
-  {"text" : "Lets see if today is any better.", "transitionAnimation" : "INTRO1","background" : "res/Pictures/Pictures/HelloWorld.png"},
-  {"text" : "i taught working at a bar would help me with being more social."},
+  {"text" : "I stand here again, what once was a fun activity now made a grueling job with horrible hours.", "animation" : "WORK1"},
+  {"text" : "I work the night shift, I used to find it smart. Making money in the night instead of laying in bed awake."},
+  {"text" : "the sound of all the talking makes me nauseous."},
+  {"text" : "Lets see if today is any better."},
+  {"text" : "i taught working at a bar would help me with being more social.",
+    "transitionAnimation": "TRANSITION1", "animation" : "WORK2"
+  },
   {"text" : "but i now just feel left out, an outcast at work. the favorite part is when i can work in solitude"},
   {"text" : "surrounded by drunk guest but no coworkers around me."},
   {"text" : "annoying guest i can handle, but seeing your colleges despise you always stings."},
@@ -18,7 +20,7 @@
   {"text" : "this all began a while ago."},
   {"text" : "."},
   {"text" : "."},
-  {"text" : "."}
+  {"text" : ".","animation" : "OUTSIDE1"}
 
 ]
 }
