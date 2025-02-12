@@ -19,6 +19,37 @@ public class AnimationHandler {
     private static ArrayList<String> animationList = new ArrayList<>();
     public static boolean isTransitionPlaying = false;
 
+    public static void animation(String animationEnum, JLayeredPane panel) {
+        int defaultSpeed = Config.getInstance().animationSpeedInMilliseconds;
+        playAnimation(animationEnum, panel, defaultSpeed);
+    }
+    public static void playAnimation(String animationEnum, JLayeredPane panel, int speed) {
+        Config config = Config.getInstance();
+        if (timer != null && timer.isRunning()) {
+            timer.stop();
+        }
+        final int[] i = {0};
+        animationList = AnimationHolder.valueOf(animationEnum).getFramePaths();
+        if (animationList.isEmpty()) return;
+
+        Game.setCurrentBackgroundImage(animationList.get(i[0]));
+        panel.repaint();
+
+        timer = new Timer(speed, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                i[0]++;
+                if (i[0] >= animationList.size()) {
+                    i[0] = 0;
+                }
+                Game.setCurrentBackgroundImage(animationList.get(i[0]));
+                panel.repaint();
+            }
+        });
+        timer.start();
+    }
+
+
     public static void playTransitionAnimation(String transitionEnum, String newBackground, String newAnimation, JLayeredPane panel) {
         if (transitionEnum == null) {
             updateScene(newBackground, newAnimation, panel);
@@ -47,45 +78,17 @@ public class AnimationHandler {
         transitionTimer.start();
     }
 
-    public static void animation(String animationEnum, JLayeredPane panel) {
-        int defaultSpeed = Config.getInstance().animationSpeedInMilliseconds;
-        playAnimation(animationEnum, panel, defaultSpeed);
-    }
-
-    public static void playAnimation(String animationEnum, JLayeredPane panel, int speed) {
-        Config config = Config.getInstance();
-        if (timer != null && timer.isRunning()) {
-            timer.stop();
-        }
-        final int[] i = {0};
-        animationList = AnimationHolder.valueOf(animationEnum).getFramePaths();
-        if (animationList.isEmpty()) return;
-
-        Game.setCurrentBackgroundImage(animationList.get(i[0]));
-        panel.repaint();
-
-        timer = new Timer(speed, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                i[0]++;
-                if (i[0] >= animationList.size()) {
-                    i[0] = 0;
-                }
-                Game.setCurrentBackgroundImage(animationList.get(i[0]));
-                panel.repaint();
-            }
-        });
-        timer.start();
-    }
-
     public static void playIntro(String introAnimation, String newBackground, int imageTimer, String introSound, JLayeredPane panel) {
+        // Play intro sound if provided
         if (introSound != null && !introSound.isEmpty()) {
             SoundHandler.playBackgroundMusic(introSound);
         }
 
+        // If no animation but there's a background image, show it for the given time
         if (introAnimation == null || introAnimation.isEmpty()) {
             updateScene(newBackground, null, panel);
 
+            // If imageTimer > 0, wait before transitioning to MainScreen
             if (imageTimer > 0) {
                 Timer imageDisplayTimer = new Timer(imageTimer, evt -> showMainScreen(panel));
                 imageDisplayTimer.setRepeats(false);
@@ -97,10 +100,12 @@ public class AnimationHandler {
         }
 
         try {
+            // Try fetching animation frames
             AnimationHolder animationHolder = AnimationHolder.valueOf(introAnimation);
             List<String> animationList = animationHolder.getFramePaths();
 
             if (animationList.isEmpty()) {
+                // No frames available, treat as an image instead
                 updateScene(newBackground, null, panel);
                 if (imageTimer > 0) {
                     Timer imageDisplayTimer = new Timer(imageTimer, evt -> showMainScreen(panel));
@@ -112,11 +117,14 @@ public class AnimationHandler {
                 return;
             }
 
+            // Calculate total animation duration
             int totalAnimationTime = (imageTimer > 0) ? imageTimer : animationList.size() * Config.getInstance().animationSpeedInMilliseconds;
-            if (totalAnimationTime <= 0) totalAnimationTime = animationList.size() * 100;
+            if (totalAnimationTime <= 0) totalAnimationTime = animationList.size() * 100; // Default to 100ms per frame
 
+            // Play the animation
             AnimationHandler.animation(introAnimation, panel);
 
+            // Timer to transition after animation ends
             Timer transitionTimer = new Timer(totalAnimationTime, evt -> {
                 isTransitionPlaying = false;
                 updateScene(newBackground, null, panel);
@@ -139,14 +147,17 @@ public class AnimationHandler {
     }
 
     public static void skipTransition(JLayeredPane panel) {
+        System.out.println(isTransitionPlaying);
         if (isTransitionPlaying) {
             isTransitionPlaying = false;
             if (transitionTimer != null && transitionTimer.isRunning()) {
                 transitionTimer.stop();
             }
             timerstopper();
+            isTransitionPlaying = false;
 
             StoryHolder storypart = GamePlayer.getCurrentStoryHolder();
+
 
             if (storypart.getAnimation() != null) {
                 updateScene(null, storypart.getAnimation(), panel);

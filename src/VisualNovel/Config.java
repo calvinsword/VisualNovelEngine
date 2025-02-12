@@ -63,7 +63,7 @@ public class Config {
     public boolean ClickableTransistionAnimations = false;
     public String title = "Asocial";
     public int animationSpeedInMilliseconds = 800;
-    public int transitionAnimationSpeedInMilliseconds = 100;
+    public int transitionAnimationSpeedInMilliseconds = 80;
 
     // Private constructor to prevent instantiation
     private Config() {}
