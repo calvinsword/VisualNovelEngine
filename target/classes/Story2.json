@@ -1,0 +1,4 @@
+{ "story" : [
+  {"id" : 1, "text" : "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "background" : "res/Pictures/Pictures/HelloWorld.png","music": "res/Sounds/Intro-1.wav"}
+]
+}
