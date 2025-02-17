@@ -5,7 +5,6 @@ import java.util.Arrays;
 
 public enum AnimationHolder {
     // Enum constants with their associated frame paths
-    //TODO: DONT MAKE THIS HARDCODED
     MAIN_MENU(new ArrayList<>(Arrays.asList(
             "res/Pictures/Animations/MainScreen/IntroScreen1.png",
             "res/Pictures/Animations/MainScreen/IntroScreen2.png",
@@ -45,6 +44,21 @@ public enum AnimationHolder {
             "res/Pictures/Animations/Work7/Work7-1.png",
             "res/Pictures/Animations/Work7/Work7-2.png",
             "res/Pictures/Animations/Work7/Work7-3.png"
+    ))),
+    WORK8(new ArrayList<>(Arrays.asList(
+            "res/Pictures/Animations/Work8/Work8-1.png",
+            "res/Pictures/Animations/Work8/Work8-2.png",
+            "res/Pictures/Animations/Work8/Work8-3.png"
+    ))),
+    WORK9(new ArrayList<>(Arrays.asList(
+            "res/Pictures/Animations/Work9/Work9-1.png",
+            "res/Pictures/Animations/Work9/Work9-2.png",
+            "res/Pictures/Animations/Work9/Work9-3.png"
+    ))),
+    TRAM1(new ArrayList<>(Arrays.asList(
+            "res/Pictures/Animations/Tram1/Tram-1.png",
+            "res/Pictures/Animations/Tram1/Tram-2.png",
+            "res/Pictures/Animations/Tram1/Tram-3.png"
     ))),
     OUTSIDE1(new ArrayList<>(Arrays.asList(
             "res/Pictures/Animations/Outside1/Outside1.png",
@@ -104,6 +118,33 @@ public enum AnimationHolder {
             "res/Pictures/Transitions/Work6ToWork7/transition7-3.png",
             "res/Pictures/Transitions/Work6ToWork7/transition7-4.png",
             "res/Pictures/Transitions/Work6ToWork7/transition7-5.png"
+    ))),
+    TRANSITION8(new ArrayList<>(Arrays.asList(
+            "res/Pictures/Transitions/Work7ToWork8/transition8-1.png",
+            "res/Pictures/Transitions/Work7ToWork8/transition8-2.png",
+            "res/Pictures/Transitions/Work7ToWork8/transition8-3.png",
+            "res/Pictures/Transitions/Work7ToWork8/transition8-4.png",
+            "res/Pictures/Transitions/Work7ToWork8/transition8-5.png"
+    ))),
+    TRANSITION9(new ArrayList<>(Arrays.asList(
+            "res/Pictures/Transitions/Work8ToWork9/transiton9-1.png",
+            "res/Pictures/Transitions/Work8ToWork9/transiton9-2.png",
+            "res/Pictures/Transitions/Work8ToWork9/transiton9-3.png",
+            "res/Pictures/Transitions/Work8ToWork9/transiton9-4.png",
+            "res/Pictures/Transitions/Work8ToWork9/transiton9-5.png",
+            "res/Pictures/Transitions/Work8ToWork9/transiton9-6.png",
+            "res/Pictures/Transitions/Work8ToWork9/transiton9-7.png",
+            "res/Pictures/Transitions/Work8ToWork9/transiton9-8.png",
+            "res/Pictures/Transitions/Work8ToWork9/transiton9-9.png",
+            "res/Pictures/Transitions/Work8ToWork9/transiton9-10.png",
+            "res/Pictures/Transitions/Work8ToWork9/transiton9-11.png"
+    ))),
+    TRANSITION10(new ArrayList<>(Arrays.asList(
+            "res/Pictures/Transitions/Work9ToWork8/transition10-1.png",
+            "res/Pictures/Transitions/Work9ToWork8/transition10-2.png",
+            "res/Pictures/Transitions/Work9ToWork8/transition10-3.png",
+            "res/Pictures/Transitions/Work9ToWork8/transition10-4.png",
+            "res/Pictures/Transitions/Work9ToWork8/transition10-5.png"
     )));
 
 
