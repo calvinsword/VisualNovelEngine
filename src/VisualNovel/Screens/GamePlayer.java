@@ -16,6 +16,7 @@ import java.awt.event.MouseListener;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -28,6 +29,7 @@ public class GamePlayer {
     private static String JsonLink;
     static boolean firstTime = true;
     static int[] currentTextIndex = {0};
+    public static List<StoryHolder> storyEntries = new ArrayList<>();
 
 
     public GamePlayer(JLayeredPane panel) {
@@ -35,23 +37,18 @@ public class GamePlayer {
     }
 
     public static void showGameContent(JLayeredPane panel) {
-        int buttonWidth = 80;
-        int buttonHeight = 30;
-
         panel.removeAll();
         Config config = Config.getInstance();
-
-        if(!firstTime){
-            int[] a = {0};
-            setCurrentTextIndex(a);
-        }
-
         if(firstTime) {
             JsonLink = config.storyJsonFileLink;
             firstTime = false;
+        }else{
+            int[] a = {0};
+            setCurrentTextIndex(a);
+            System.out.println(Arrays.toString(a));
         }
         // Load story texts from JSON
-        List<StoryHolder> storyEntries = loadStoryTexts(JsonLink);
+        storyEntries = loadStoryTexts(JsonLink);
 
         // Apply the background of the first story entry if it exists
         String initialBackground = storyEntries.get(currentTextIndex[0]).getBackground();
@@ -108,6 +105,7 @@ public class GamePlayer {
                          isTransitionPlaying = false;
                      }
                  }
+
                 if (!textDisplay[0].isAnimationComplete()) {
                     textDisplay[0].completeAnimation();
 
@@ -208,7 +206,6 @@ public class GamePlayer {
     }
 
     private static List<StoryHolder> loadStoryTexts(String filePath) {
-        List<StoryHolder> storyEntries = new ArrayList<>();
         try {
             String content = new String(Files.readAllBytes(Paths.get(filePath)));
             JSONObject jsonObject = new JSONObject(content);
@@ -254,9 +251,14 @@ public class GamePlayer {
             System.err.println("Error: JsonLink is not set.");
             return;
         }
+        for (MouseListener ml : panel.getMouseListeners()) {
+            panel.removeMouseListener(ml);
+        }
 
-        List<StoryHolder> storyEntries = loadStoryTexts(JsonLink);
+        storyEntries.clear();
+        loadStoryTexts(JsonLink);
         showGameContent(panel);
+        System.out.println(JsonLink);
 
         if (storyEntries.isEmpty()) {
             System.err.println("Error: No story entries found in the new JSON file.");
@@ -269,8 +271,8 @@ public class GamePlayer {
         panel.repaint();
     }
 
-    public static void setCurrentTextIndex(int[] currentTextIndex) {
-        GamePlayer.currentTextIndex = currentTextIndex;
+    public static void setCurrentTextIndex(int[] currenttextindex) {
+        currentTextIndex = currenttextindex;
     }
 
     public static StoryHolder getCurrentStoryHolder(){

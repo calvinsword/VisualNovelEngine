@@ -1,0 +1,12 @@
+{
+  "story": [
+    {"text" : "my eyes feel so heavy but i am almost home..."},
+    {
+      "text": "i got to stay up...",
+      "story option": "STAY AWAKE",
+      "story option link": "res/AwakeTram.json",
+      "story option1": "GIVE IN",
+      "story option link1": "res/DreamTram.json"
+    }
+  ]
+}
