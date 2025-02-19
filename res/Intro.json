@@ -3,9 +3,7 @@
   {"text" : "I work the night shift, I used to find it smart. Making money in the night instead of laying in bed awake."},
   {"text" : "the sound of all the talking makes me nauseous."},
   {"text" : "Lets see if today is any better."},
-  {"text" : "i taught working at a bar would help me with being more social.",
-    "transitionAnimation": "TRANSITION1", "animation" : "WORK2"
-  },
+  {"text" : "i taught working at a bar would help me with being more social.", "transitionAnimation": "TRANSITION1", "animation" : "WORK2"},
   {"text" : "but i now just feel left out, an outcast at work. the favorite part is when i can work in solitude."},
   {"text" : "surrounded by drunk guest but no coworkers around me."},
   {"text" : "annoying guest i can handle, but seeing your colleges despise you always stings."},

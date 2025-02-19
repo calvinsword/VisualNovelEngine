@@ -1,6 +1,0 @@
-{ "story" : [
-  {"id" : 1, "text" : "Hello World", "background" : "res/Pictures/Pictures/HelloWorld.png","music": "res/Sounds/Intro-1.wav"},
-  {"id" : 3, "text" : "With this text i am demonstrating that it wil not draw the entire word but will split it in the textbox.","animation" : "INTRO1"},
-  {"id" : 4, "text" : "TestTest", "story option" : "what heh", "story option link" : "res/Story2.json","story option1" : "second one","story option link1" : "res/Story3.json","story option2" : "THIRD ONE","story option link2" : "res/Story4.json"}
-]
-}
