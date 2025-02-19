@@ -42,11 +42,9 @@ public class GamePlayer {
         if(firstTime) {
             JsonLink = config.storyJsonFileLink;
             firstTime = false;
-        }else{
-            int[] a = {0};
-            setCurrentTextIndex(a);
-            System.out.println(Arrays.toString(a));
         }
+
+
         // Load story texts from JSON
         storyEntries = loadStoryTexts(JsonLink);
 
@@ -207,6 +205,8 @@ public class GamePlayer {
 
     private static List<StoryHolder> loadStoryTexts(String filePath) {
         try {
+            storyEntries.clear();
+
             String content = new String(Files.readAllBytes(Paths.get(filePath)));
             JSONObject jsonObject = new JSONObject(content);
             JSONArray storyArray = jsonObject.getJSONArray("story");
@@ -251,25 +251,37 @@ public class GamePlayer {
             System.err.println("Error: JsonLink is not set.");
             return;
         }
+
+        // Remove all mouse listeners to prevent duplicates
         for (MouseListener ml : panel.getMouseListeners()) {
             panel.removeMouseListener(ml);
         }
 
+        // Preserve the current text index before clearing
         storyEntries.clear();
-        loadStoryTexts(JsonLink);
-        showGameContent(panel);
-        System.out.println(JsonLink);
+
+        // Fully reset the story list to avoid leftover entries
+        storyEntries = new ArrayList<>(); // Replace the list instead of clearing
+
+        // Load the new story content
+        storyEntries = loadStoryTexts(JsonLink);
 
         if (storyEntries.isEmpty()) {
             System.err.println("Error: No story entries found in the new JSON file.");
             return;
         }
+
+        currentTextIndex[0] = 0;
+
+        // Refresh UI
         panel.removeAll();
         showGameContent(panel);
 
         panel.revalidate();
         panel.repaint();
     }
+
+
 
     public static void setCurrentTextIndex(int[] currenttextindex) {
         currentTextIndex = currenttextindex;

@@ -36,7 +36,7 @@ public class Config {
     /////////
     //STORY//
     /////////
-    public String storyJsonFileLink = "res/TramDilemma.json";
+    public String storyJsonFileLink = "res/Story.json";
 
     ///////////
     //BUTTONS//
