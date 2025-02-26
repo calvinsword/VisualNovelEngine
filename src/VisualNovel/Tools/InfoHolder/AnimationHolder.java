@@ -11,65 +11,84 @@ public enum AnimationHolder {
             "res/Pictures/Animations/MainScreen/IntroScreen3.png"
     ))),
     WORK1(new ArrayList<>(Arrays.asList(
-            "res/Pictures/Animations/Work1/Work1.png",
-            "res/Pictures/Animations/Work1/Work2.png",
-            "res/Pictures/Animations/Work1/Work3.png"
+            "res/Pictures/Animations/Intro/Work1/Work1.png",
+            "res/Pictures/Animations/Intro/Work1/Work2.png",
+            "res/Pictures/Animations/Intro/Work1/Work3.png"
     ))),
     WORK2(new ArrayList<>(Arrays.asList(
-            "res/Pictures/Animations/Work2/Work2-1.png",
-            "res/Pictures/Animations/Work2/Work2-2.png",
-            "res/Pictures/Animations/Work2/Work2-3.png"
+            "res/Pictures/Animations/Intro/Work2/Work2-1.png",
+            "res/Pictures/Animations/Intro/Work2/Work2-2.png",
+            "res/Pictures/Animations/Intro/Work2/Work2-3.png"
     ))),
     WORK3(new ArrayList<>(Arrays.asList(
-            "res/Pictures/Animations/Work3/Work3-1.png",
-            "res/Pictures/Animations/Work3/Work3-2.png",
-            "res/Pictures/Animations/Work3/Work3-3.png"
+            "res/Pictures/Animations/Intro/Work3/Work3-1.png",
+            "res/Pictures/Animations/Intro/Work3/Work3-2.png",
+            "res/Pictures/Animations/Intro/Work3/Work3-3.png"
     ))),
     WORK4(new ArrayList<>(Arrays.asList(
-            "res/Pictures/Animations/Work4/Work4-1.png",
-            "res/Pictures/Animations/Work4/Work4-2.png",
-            "res/Pictures/Animations/Work4/Work4-3.png"
+            "res/Pictures/Animations/Intro/Work4/Work4-1.png",
+            "res/Pictures/Animations/Intro/Work4/Work4-2.png",
+            "res/Pictures/Animations/Intro/Work4/Work4-3.png"
     ))),
     WORK5(new ArrayList<>(Arrays.asList(
-            "res/Pictures/Animations/Work5/Work5-1.png",
-            "res/Pictures/Animations/Work5/Work5-2.png",
-            "res/Pictures/Animations/Work5/Work5-3.png"
+            "res/Pictures/Animations/Intro/Work5/Work5-1.png",
+            "res/Pictures/Animations/Intro/Work5/Work5-2.png",
+            "res/Pictures/Animations/Intro/Work5/Work5-3.png"
     ))),
     WORK6(new ArrayList<>(Arrays.asList(
-            "res/Pictures/Animations/Work6/Work6-1.png",
-            "res/Pictures/Animations/Work6/Work6-2.png",
-            "res/Pictures/Animations/Work6/Work6-3.png"
+            "res/Pictures/Animations/Intro/Work6/Work6-1.png",
+            "res/Pictures/Animations/Intro/Work6/Work6-2.png",
+            "res/Pictures/Animations/Intro/Work6/Work6-3.png"
     ))),
     WORK7(new ArrayList<>(Arrays.asList(
-            "res/Pictures/Animations/Work7/Work7-1.png",
-            "res/Pictures/Animations/Work7/Work7-2.png",
-            "res/Pictures/Animations/Work7/Work7-3.png"
+            "res/Pictures/Animations/Intro/Work7/Work7-1.png",
+            "res/Pictures/Animations/Intro/Work7/Work7-2.png",
+            "res/Pictures/Animations/Intro/Work7/Work7-3.png"
     ))),
     WORK8(new ArrayList<>(Arrays.asList(
-            "res/Pictures/Animations/Work8/Work8-1.png",
-            "res/Pictures/Animations/Work8/Work8-2.png",
-            "res/Pictures/Animations/Work8/Work8-3.png"
+            "res/Pictures/Animations/Intro/Work8/Work8-1.png",
+            "res/Pictures/Animations/Intro/Work8/Work8-2.png",
+            "res/Pictures/Animations/Intro/Work8/Work8-3.png"
     ))),
     WORK9(new ArrayList<>(Arrays.asList(
-            "res/Pictures/Animations/Work9/Work9-1.png",
-            "res/Pictures/Animations/Work9/Work9-2.png",
-            "res/Pictures/Animations/Work9/Work9-3.png"
+            "res/Pictures/Animations/Intro/Work9/Work9-1.png",
+            "res/Pictures/Animations/Intro/Work9/Work9-2.png",
+            "res/Pictures/Animations/Intro/Work9/Work9-3.png"
     ))),
     TRAM1(new ArrayList<>(Arrays.asList(
-            "res/Pictures/Animations/Tram1/Tram-1.png",
-            "res/Pictures/Animations/Tram1/Tram-2.png",
-            "res/Pictures/Animations/Tram1/Tram-3.png"
+            "res/Pictures/Animations/Intro/Tram1/Tram-1.png",
+            "res/Pictures/Animations/Intro/Tram1/Tram-2.png",
+            "res/Pictures/Animations/Intro/Tram1/Tram-3.png"
+    ))),
+    TRAM2(new ArrayList<>(Arrays.asList(
+            "res/Pictures/Animations/Intro/Tram2/Tram2-1.png",
+            "res/Pictures/Animations/Intro/Tram2/Tram2-2.png",
+            "res/Pictures/Animations/Intro/Tram2/Tram2-3.png"
     ))),
     OUTSIDE1(new ArrayList<>(Arrays.asList(
-            "res/Pictures/Animations/Outside1/Outside1.png",
-            "res/Pictures/Animations/Outside1/Outside2.png",
-            "res/Pictures/Animations/Outside1/Outside3.png"
+            "res/Pictures/Animations/Intro/Outside1/Outside1.png",
+            "res/Pictures/Animations/Intro/Outside1/Outside2.png",
+            "res/Pictures/Animations/Intro/Outside1/Outside3.png"
     ))),
     OUTSIDE2(new ArrayList<>(Arrays.asList(
-            "res/Pictures/Animations/Outside2/Outside2-1.png",
-            "res/Pictures/Animations/Outside2/Outside2-2.png",
-            "res/Pictures/Animations/Outside2/Outside2-3.png"
+            "res/Pictures/Animations/Intro/Outside2/Outside2-1.png",
+            "res/Pictures/Animations/Intro/Outside2/Outside2-2.png",
+            "res/Pictures/Animations/Intro/Outside2/Outside2-3.png"
     ))),
+
+    DREAM1(new ArrayList<>(Arrays.asList(
+            "res/Pictures/Animations/Dream/Dream1/Dream1-1.png",
+            "res/Pictures/Animations/Dream/Dream1/Dream1-2.png",
+            "res/Pictures/Animations/Dream/Dream1/Dream1-3.png"
+    ))),
+    DREAM2(new ArrayList<>(Arrays.asList(
+            "res/Pictures/Animations/Dream/Dream2/Dream2-1.png",
+            "res/Pictures/Animations/Dream/Dream2/Dream2-2.png",
+            "res/Pictures/Animations/Dream/Dream2/Dream2-3.png"
+    ))),
+
+
+
     TRANSITION1(new ArrayList<>(Arrays.asList(
             "res/Pictures/Transitions/Work1ToWork2/Transition1.png",
             "res/Pictures/Transitions/Work1ToWork2/Transition2.png",
@@ -145,7 +164,43 @@ public enum AnimationHolder {
             "res/Pictures/Transitions/Work9ToWork8/transition10-3.png",
             "res/Pictures/Transitions/Work9ToWork8/transition10-4.png",
             "res/Pictures/Transitions/Work9ToWork8/transition10-5.png"
+    ))),
+    TRANSITION11(new ArrayList<>(Arrays.asList(
+            "res/Pictures/Transitions/Work8ToOutside2/Transition11-1.png",
+            "res/Pictures/Transitions/Work8ToOutside2/Transition11-2.png",
+            "res/Pictures/Transitions/Work8ToOutside2/Transition11-3.png",
+            "res/Pictures/Transitions/Work8ToOutside2/Transition11-4.png",
+            "res/Pictures/Transitions/Work8ToOutside2/Transition11-5.png"
+    ))),
+    TRANSITION12(new ArrayList<>(Arrays.asList(
+            "res/Pictures/Transitions/Outside2ToTram1/Transition12-1.png",
+            "res/Pictures/Transitions/Outside2ToTram1/Transition12-2.png",
+            "res/Pictures/Transitions/Outside2ToTram1/Transition12-3.png",
+            "res/Pictures/Transitions/Outside2ToTram1/Transition12-4.png",
+            "res/Pictures/Transitions/Outside2ToTram1/Transition12-5.png"
+    ))),
+    TRANSITION13(new ArrayList<>(Arrays.asList(
+            "res/Pictures/Transitions/Tram1ToTram2/Transition13-1.png",
+            "res/Pictures/Transitions/Tram1ToTram2/Transition13-2.png",
+            "res/Pictures/Transitions/Tram1ToTram2/Transition13-3.png",
+            "res/Pictures/Transitions/Tram1ToTram2/Transition13-4.png",
+            "res/Pictures/Transitions/Tram1ToTram2/Transition13-5.png"
+    ))),
+    TRANSITION14(new ArrayList<>(Arrays.asList(
+            "res/Pictures/Transitions/Dream/Transition14/Tram2ToDream1-1.png",
+            "res/Pictures/Transitions/Dream/Transition14/Tram2ToDream1-2.png",
+            "res/Pictures/Transitions/Dream/Transition14/Tram2ToDream1-3.png",
+            "res/Pictures/Transitions/Dream/Transition14/Tram2ToDream1-4.png",
+            "res/Pictures/Transitions/Dream/Transition14/Tram2ToDream1-5.png"
+    ))),
+    TRANSITION15(new ArrayList<>(Arrays.asList(
+            "res/Pictures/Transitions/Dream/Transition15/transition15-1.png",
+            "res/Pictures/Transitions/Dream/Transition15/transition15-2.png",
+            "res/Pictures/Transitions/Dream/Transition15/transition15-3.png",
+            "res/Pictures/Transitions/Dream/Transition15/transition15-4.png",
+            "res/Pictures/Transitions/Dream/Transition15/transition15-5.png"
     )));
+
 
 
 

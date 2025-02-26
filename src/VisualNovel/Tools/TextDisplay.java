@@ -18,8 +18,16 @@ public class TextDisplay extends JPanel {
     private final Timer timer; // Timer for letter animation
     private static float masterVolume = 0.5f; // Default volume (0.0f - 1.0f)
     private boolean isLoopRunning = true;
+    private String letterSound;
 
-    public TextDisplay(String text, int textSpeed) {
+    public TextDisplay(String text, int textSpeed,String lettersound) {
+        Config config = Config.getInstance();
+        if(lettersound != null){
+            this.letterSound = lettersound;
+        }
+        else{
+            this.letterSound = config.letterSound;
+        }
         this.text = text.toUpperCase(); // Ensure uppercase consistency
         this.fontMap = loadFontImages();
         this.displayedText = new StringBuilder();
@@ -76,8 +84,7 @@ public class TextDisplay extends JPanel {
 
     // Play a sound for each letter with volume control
     private void playLetterSound() {
-        Config config = Config.getInstance();
-        SoundHandler.playSoundEffect(config.letterSound);
+        SoundHandler.playSoundEffect(letterSound);
     }
 
 

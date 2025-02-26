@@ -1,0 +1,16 @@
+{
+  "story": [
+    {"text" : "i need to keep myself together."},
+    {"text" : "i dont wanna cry in front of my colleges."},
+    {"text" : "ah, look at the time. i need to catch the tram.","transitionAnimation" : "TRANSITION11","animation" : "OUTSIDE2"},
+    {"text" : "the cold air stings my skin."},
+    {"text" : "i can feel my tired body slogging along..."},
+    {"text" : "everything feels heavy."},
+    {"text" : "when i arrive i see the tram already at the end station.","transitionAnimation" : "TRANSITION12","animation" : "TRAM1"},
+    {"text" : "at least i dont need to wait in the cold."},
+    {"text" : "its completely empty like always. tho i dont complain.","transitionAnimation" : "TRANSITION13","animation" : "TRAM2"},
+    {"text" : "when you are this sleepy even the hardest chairs feel comfy."},
+    {"text" : "i can already feel my eyes closing..."},
+    {"text" : "i got to stay up...","story option" : "STAY AWAKE", "story option link" : "res/Story/Tram/TramDilemma.json","story option1" : "GIVE IN","story option link1" : "res/Story/Tram/DreamTram.json"}
+  ]
+}

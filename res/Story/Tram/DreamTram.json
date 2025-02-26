@@ -1,0 +1,19 @@
+{
+  "story": [
+    {"text" : "i got to stay...","transitionAnimation" : "TRANSITION14","animation" : "DREAM1"},
+    {"text" : "..."},
+    {"text" : "..."},
+    {"text" : "d. ... hav. a......g you ..nt to t..k a....?"},
+    {"text" : "do ..u h.ve an...ing you w.nt to t.lk ab..t?"},
+    {"text" : "do y.u have anyt.ing you want to talk ab.ut?"},
+    {"text" : "do you have anything you want to talk about?"},
+    {"text" : "hello?","transitionAnimation" : "TRANSITION15","animation" : "DREAM2"},
+    {"text" : "who are you?"},
+    {"text" : "i am you."},
+    {"text" : "i am the one you keep talking to."},
+    {"text" : "i dont understand."},
+    {"text" : "you keep talking to me instead of others. for you are a coward."},
+    {"text" : "talking with real people scares you so you make fictional conversations. with me."},
+    {"text" : "so... do you have anything you want to talk about?"}
+  ]
+}

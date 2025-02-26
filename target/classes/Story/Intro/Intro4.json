@@ -1,0 +1,30 @@
+{
+  "story": [
+    {"text" : "y.. yeah..."},
+    {"text" : "i didnt even notice it till the lights came on"},
+    {"text" : "it's not that i am the only one. and also not the most."},
+    {"text" : "it's."},
+    {"text" : "it's just that i am disappointed in myself."},
+    {"text" : "i wanted to stay sober."},
+    {"text" : "i am a failure."},
+    {"text" : "we always sit together after a shift.","transitionAnimation" :  "TRANSITION8","animation" : "WORK8"},
+    {"text" : "talk about the day and just catch up."},
+    {"text" : "although i dont have lots to talk about i always sit with them."},
+    {"text" : "the first tram home is in a hour so it helps with killing the time."},
+    {"text" : "[in the corner of my eye i see a mouse walking]","transitionAnimation" :  "TRANSITION9","animation" : "WORK9"},
+    {"text" : "i dont even know of that is a real one or that my sleep deprived mind playing tricks on me."},
+    {"text" : "its fascinating what a mind can do."},
+    {"text" : "it can create its own reality. Show things that are not real."},
+    {"text" : "luckily my mind only does this when i am sleep deprived.","transitionAnimation" :  "TRANSITION10","animation" : "WORK8"},
+    {"text" : "sadly though, i am always sleep deprived."},
+    {"text" : "i dont know why its always mice."},
+    {"text" : "it started years ago and hasn't really gotten worse."},
+    {"text" : "thank god for that i guess."},
+    {"text" : "even tough i am already tipsy i still continue drinking."},
+    {"text" : "i keep trying to stop drinking. i keep saying that today i will stay sober."},
+    {"text" : "and then i just keep on drinking. the feeling that this is my only release haunts me."},
+    {"text" : "i keep having no fallow through."},
+    {"text" : "and so keep disappointing myself."},
+    {"text" : "","story option" : "You are staring to cry","story option link" : "res/Story/Intro/Intro5.json"}
+    ]
+}

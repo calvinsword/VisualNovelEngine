@@ -1,0 +1,8 @@
+{
+  "story": [
+    {"text" : "probably yeah..."},
+    {"text" : "that's a wierd thing to say to yourself."},
+    {"text" : "but is that what makes me pathetic?"},
+    {"text" : "","story option" : "you are slacking off.","story option link" : "res/Story/Intro/Intro3.json"}
+  ]
+}

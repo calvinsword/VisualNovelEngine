@@ -22,7 +22,7 @@ public class Config {
     //OPTIONS//
     ///////////
     public String sliderBackground = "res/Pictures/TextBox.png";
-    public String sliderbar = "res/Pictures/Pictures/img.png";
+    public String sliderbar = "res/Pictures/Animations/Intro1/img.png";
 
     public String optionsImage = "res/Pictures/Pictures/MC.png";
     public String optionsAnimation = null;
@@ -36,7 +36,7 @@ public class Config {
     /////////
     //STORY//
     /////////
-    public String storyJsonFileLink = "res/Intro.json";
+    public String storyJsonFileLink = "res/Story/Intro/Intro.json";
 
     ///////////
     //BUTTONS//
@@ -50,6 +50,8 @@ public class Config {
     public String exitPressedButton = "res/Pictures/Buttons/ExitPressed.png";
     public String beginButton = "res/Pictures/Buttons/BeginNotPressed.png";
     public String beginPressedButton = "res/Pictures/Buttons/BeginPressed.png";
+    public String storyButtonSound = null;
+    public String storyButtonPressedSound = null;
 
     /////////
     //SOUND//
@@ -64,6 +66,7 @@ public class Config {
     public String title = "Asocial";
     public int animationSpeedInMilliseconds = 800;
     public int transitionAnimationSpeedInMilliseconds = 80;
+    public String cursor = "res/Pictures/cursor.png";
 
     // Private constructor to prevent instantiation
     private Config() {}

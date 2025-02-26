@@ -50,6 +50,7 @@ public class GamePlayer {
 
         // Apply the background of the first story entry if it exists
         String initialBackground = storyEntries.get(currentTextIndex[0]).getBackground();
+        String currentTransitionAnimation = storyEntries.get(currentTextIndex[0]).getTransitionAnimation();
         String currentanimation = storyEntries.get(currentTextIndex[0]).getAnimation();
         String currentMusic = storyEntries.get(currentTextIndex[0]).getMusic();
         if ((initialBackground != null && !initialBackground.equals(Game.getCurrentBackgroundImage())) || currentanimation != null) {
@@ -58,8 +59,11 @@ public class GamePlayer {
             }
             timerstopper();
             Game.setCurrentBackgroundImage(initialBackground);
-            if(currentanimation != null){
-                AnimationHandler.animation(currentanimation,panel);
+            if (currentTransitionAnimation != null) {
+                AnimationHandler.playTransitionAnimation(currentTransitionAnimation, null, currentanimation, panel);
+            }
+            else {
+                updateScene(initialBackground, currentanimation, panel);
             }
             panel.repaint();
         }
@@ -90,7 +94,7 @@ public class GamePlayer {
 
         textBoxPanel.setBounds(margin, textBoxY, textBoxWidth, textBoxHeight);
 
-        TextDisplay[] textDisplay = {new TextDisplay(storyEntries.get(currentTextIndex[0]).getText(), Game.getTextSpeed())};
+        TextDisplay[] textDisplay = {new TextDisplay(storyEntries.get(currentTextIndex[0]).getText(), Game.getTextSpeed(),storyEntries.get(currentTextIndex[0]).getDiffLetterSound())};
         textDisplay[0].setBounds(10, 10, textBoxWidth - 20, textBoxHeight - 20);
         textBoxPanel.add(textDisplay[0]);
 
@@ -163,7 +167,7 @@ public class GamePlayer {
                         updateScene(newBackground, newAnimation, panel);
                     }
 
-                    textDisplay[0] = new TextDisplay(storyEntries.get(currentTextIndex[0]).getText(), Game.getTextSpeed());
+                    textDisplay[0] = new TextDisplay(storyEntries.get(currentTextIndex[0]).getText(), Game.getTextSpeed(),storyEntries.get(currentTextIndex[0]).getDiffLetterSound());
                     textDisplay[0].setBounds(10, 10, textBoxWidth - 20, textBoxHeight - 20);
                     textBoxPanel.add(textDisplay[0]);
 
@@ -232,7 +236,9 @@ public class GamePlayer {
                 String storyOptionImage2 = entry.optString("story option image2",null);
                 String storyOptionPressedImage2 = entry.optString("story option pressed image2",null);
 
-                storyEntries.add(new StoryHolder(text, background,animation,transitionAnimation, music,storyOption,storyOptionLink,storyOptionImage,storyOptionPressedImage,storyOption1,storyOptionLink1,storyOptionImage1,storyOptionPressedImage1,storyOption2,storyOptionLink2,storyOptionImage2,storyOptionPressedImage2));
+                String diffLetterSound = entry.optString("letterSound",null);
+
+                storyEntries.add(new StoryHolder(text, background,animation,transitionAnimation, music,storyOption,storyOptionLink,storyOptionImage,storyOptionPressedImage,storyOption1,storyOptionLink1,storyOptionImage1,storyOptionPressedImage1,storyOption2,storyOptionLink2,storyOptionImage2,storyOptionPressedImage2,diffLetterSound));
             }
         } catch (Exception e) {
             e.printStackTrace();

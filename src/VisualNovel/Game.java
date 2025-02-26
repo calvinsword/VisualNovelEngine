@@ -38,6 +38,12 @@ public class Game {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.setUndecorated(true);
+        if(config.cursor != null) {
+            Toolkit toolkit = Toolkit.getDefaultToolkit();
+            Image cursorImage = toolkit.getImage(config.cursor);
+            Cursor customCursor = toolkit.createCustomCursor(cursorImage, new Point(0, 0), "Custom Cursor");
+            frame.setCursor(customCursor);
+        }
 
         JLayeredPane panel = new JLayeredPane() {
             @Override

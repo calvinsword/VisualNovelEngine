@@ -1,0 +1,20 @@
+{
+  "story": [
+    {"text" : "you're right."},
+    {"text" : "its to busy to think about this."},
+    {"text" : "better start helping the next guest.", "transitionAnimation" : "TRANSITION3","animation" : "WORK2"},
+    {"text" : "better make the drink."},
+    {"text" : "better clean the bar.","transitionAnimation" : "TRANSITION4","animation" : "WORK4"},
+    {"text" : "better clean the glasses."},
+    {"text" : "better take another beer to calm the nerves.","transitionAnimation" : "TRANSITION5","animation" : "WORK5"},
+    {"text" : "help the guest."},
+    {"text" : "make the drink.","transitionAnimation" : "TRANSITION6","animation" : "WORK6"},
+    {"text" : "take the beer."},
+    {"text" : "clean."},
+    {"text" : "serve.","transitionAnimation" : "TRANSITION7","animation" : "WORK7"},
+    {"text" : "beer."},
+    {"text" : "ow... its already the end..."},
+    {"text" : "time flies when, when.. i am drunk..."},
+    {"text" : "","story option" : "AGAIN?","story option link" : "res/Story/Intro/Intro4.json"}
+  ]
+}

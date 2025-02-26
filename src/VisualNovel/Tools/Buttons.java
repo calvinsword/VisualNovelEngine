@@ -213,6 +213,7 @@ public class Buttons {
     }
     public JButton newStoryOptionButton(String buttonText,String newJsonLink, int amountOfChoices, int choicesRank, String imageUrl, String imagePressedUrl, JLayeredPane panel) {
         Config config = Config.getInstance();
+        SoundHandler.playSoundEffect(config.storyButtonSound);
         int screenHeight = panel.getHeight();
         int screenWidth = panel.getWidth();
         int buttonWidth = 200;
@@ -248,10 +249,11 @@ public class Buttons {
         storyOptionButton.setIcon(storyOptionButtonImage);
 
         storyOptionButton.addActionListener(e -> {
+            if (config.storyButtonPressedSound != null) {
+                SoundHandler.playSoundEffect(config.storyButtonPressedSound);
+            }
             GamePlayer.setJsonLink(newJsonLink);
             GamePlayer.reloadStory(panel);
-            System.out.println("test");
-            System.out.println(GamePlayer.getJsonLink());
         });
 
         return storyOptionButton;
