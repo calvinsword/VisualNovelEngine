@@ -1,6 +1,56 @@
 {
   "story": [
-    {"text" : "debug this is awake"},
-    {"text" : ""}
+    {"text" : "im here.","transitionAnimation" : "TRANSITION21","animation" : "TRAM4"},
+    {"text" : "its only a five minute walk luckily."},
+    {"text" : "...","transitionAnimation" : "TRANSITION22","animation" : "HOME1"},
+    {"text" : "lets go to bed.","transitionAnimation" : "TRANSITION19","animation" : "HOME2"},
+    {"text" : "tomorrow is a new day.","transitionAnimation" : "TRANSITION20","animation" : "HOME3"},
+    {"text" : "lets hope it will be a better day."},
+    {"text" : "its hard to keep my eyes open"},
+    {"text" : "not that surprising it's nine in the morning."},
+    {"text" : "i need to sle...","transitionAnimation" : "TRANSITION23","animation" : "DREAM1"},
+    {"text" : "..."},
+    {"text" : "..."},
+    {"text" : "..y!","letterSound" : "res/Sounds/TextSoundEffect_2.wav"},
+    {"text" : "h.y!","letterSound" : "res/Sounds/TextSoundEffect_2.wav"},
+    {"text" : "hey!","letterSound" : "res/Sounds/TextSoundEffect_2.wav"},
+    {"text" : "hello?","transitionAnimation" : "TRANSITION15","animation" : "DREAM2"},
+    {"text" : "who are you?"},
+    {"text" : "hows it going.","letterSound" : "res/Sounds/TextSoundEffect_2.wav"},
+    {"text" : "you are way to doom and gloom.","letterSound" : "res/Sounds/TextSoundEffect_2.wav"},
+    {"text" : "i dont understand."},
+    {"text" : "you imagine things that arent happening.","letterSound" : "res/Sounds/TextSoundEffect_2.wav"},
+    {"text" : "so much of what you are experiencing isn't happening.","letterSound" : "res/Sounds/TextSoundEffect_2.wav"},
+    {"text" : "you think to much.","letterSound" : "res/Sounds/TextSoundEffect_2.wav"},
+    {"text" : "i didnt know i was such a lucid dreamer?"},
+    {"text" : "you dont know much when you drink that much.","letterSound" : "res/Sounds/TextSoundEffect_2.wav"},
+    {"text" : "..."},
+    {"text" : "awh come on it was a joke...","letterSound" : "res/Sounds/TextSoundEffect_2.wav"},
+    {"text" : "are you the one who keeps responding to me?"},
+    {"text" : "huh? ow no. That's all you.","letterSound" : "res/Sounds/TextSoundEffect_2.wav"},
+    {"text" : "like i said, you think to much. all those thoughts are you talking to your self.","letterSound" : "res/Sounds/TextSoundEffect_2.wav"},
+    {"text" : "just like now funny enough.","letterSound" : "res/Sounds/TextSoundEffect_2.wav"},
+    {"text" : "like now?"},
+    {"text" : "well i wanted to give you some advice."},
+    {"text" : "you could have just talked.","letterSound" : "res/Sounds/TextSoundEffect_2.wav"},
+    {"text" : "socialized with your coworkers.","letterSound" : "res/Sounds/TextSoundEffect_2.wav"},
+    {"text" : "you already switched jobs to be more social. yet nothing changed.","letterSound" : "res/Sounds/TextSoundEffect_2.wav"},
+    {"text" : "the only difference now is that you can drink on the job. which is not an improvement.","letterSound" : "res/Sounds/TextSoundEffect_2.wav"},
+    {"text" : "you only fueled your own sleeplessness not to mention your substance abuse problems.","letterSound" : "res/Sounds/TextSoundEffect_2.wav"},
+    {"text" : "also you keep working yourself to the bone. you are working twice as hard as the rest for what?","letterSound" : "res/Sounds/TextSoundEffect_2.wav"},
+    {"text" : "so they dont get mad at you?","letterSound" : "res/Sounds/TextSoundEffect_2.wav"},
+    {"text" : "come on?","letterSound" : "res/Sounds/TextSoundEffect_2.wav"},
+    {"text" : "i try to better myself i really do."},
+    {"text" : "like when you tried to stay sober?","letterSound" : "res/Sounds/TextSoundEffect_2.wav"},
+    {"text" : "i... i sometimes just loose control."},
+    {"text" : "i dont know how to explain it."},
+    {"text" : "it just gives me this ease of mind."},
+
+
+
+
+    {"text" : "try to not forget this okay.. like i said this isn't the first time we had this conversation."},
+    {"text" : "i... ill try..."},
+    {"text" : "","story option" : "Thanks","story option link" : "res/Story/SecondDay/WakingUp.json"}
   ]
 }

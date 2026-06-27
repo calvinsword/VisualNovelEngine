@@ -20,7 +20,7 @@ public class Game {
     /////////
     private static Clip backgroundMusic;
     private static Clip soundEffect;
-    private static int masterVolume = 50;
+    private static int masterVolume = 20;
 
     ////////
     //TEXT//

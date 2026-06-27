@@ -34,28 +34,34 @@ public class SoundHandler {
             backgroundMusic.open(audioStream);
             backgroundMusic.loop(Clip.LOOP_CONTINUOUSLY);
 
-            // Store the new clip in Game and update musicPath only after it's set
+            // Store the new clip in Game and update musicPath
             Game.setBackgroundMusic(backgroundMusic);
-            setBackgroundMusicVolume(Game.getMasterVolume());
             musicPath = musicFilePath;
+
+            // Now set the volume on the newly assigned clip
+            setBackgroundMusicVolume(Game.getMasterVolume());
 
         } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
             e.printStackTrace();
         }
     }
     public static void setBackgroundMusicVolume(int volume) {
-        if (Game.getBackgroundMusic() != null) {
-            FloatControl gainControl = (FloatControl) Game.getBackgroundMusic().getControl(FloatControl.Type.MASTER_GAIN);
-            if (volume == 0) {
-                // Mute the audio completely
-                gainControl.setValue(gainControl.getMinimum());
-            } else {
-                // Map volume (1-100) to a gain scale (-80.0 to 6.0 dB)
-                float gain = (float) (20.0 * Math.log10(volume / 100.0));
-                gainControl.setValue(gain);
+        Clip bgMusic = Game.getBackgroundMusic();
+        if (bgMusic != null && bgMusic.isControlSupported(FloatControl.Type.MASTER_GAIN)) {
+            FloatControl gainControl = (FloatControl) bgMusic.getControl(FloatControl.Type.MASTER_GAIN);
+
+            float gain = (volume <= 0) ? gainControl.getMinimum() : (float) (20.0 * Math.log10(volume / 100.0));
+
+            gainControl.setValue(gain); // Apply volume change
+
+            // Force immediate processing by briefly stopping & restarting playback
+            if (bgMusic.isRunning()) {
+                bgMusic.stop();
+                bgMusic.start();
             }
         }
     }
+
     public static void playSoundEffect(String soundLink) {
         try {
             File soundFile = new File(soundLink);

@@ -136,6 +136,7 @@ public class GamePlayer {
                     String storyOption2JsonLink = storyEntries.get(currentTextIndex[0]).getStoryOptionJsonLink2();
                     String storyOption2Image = storyEntries.get(currentTextIndex[0]).getStoryOptionImage2();
                     String storyOption2PressedImage = storyEntries.get(currentTextIndex[0]).getStoryOptionImagePressed2();
+                    boolean autoSkip =  storyEntries.get(currentTextIndex[0]).getAutoSkip();
 
                     int numberOfChoices = 0;
                     if (storyOption != null) numberOfChoices++;
@@ -177,6 +178,7 @@ public class GamePlayer {
             }
         };
 
+
         textMouseListener = new java.awt.event.MouseAdapter() {
             @Override
             public void mouseClicked(java.awt.event.MouseEvent e) {
@@ -207,6 +209,7 @@ public class GamePlayer {
         textBoxPanel.requestFocusInWindow();
     }
 
+
     private static List<StoryHolder> loadStoryTexts(String filePath) {
         try {
             storyEntries.clear();
@@ -235,10 +238,11 @@ public class GamePlayer {
                 String storyOptionLink2 = entry.optString("story option link2",null);
                 String storyOptionImage2 = entry.optString("story option image2",null);
                 String storyOptionPressedImage2 = entry.optString("story option pressed image2",null);
+                boolean autoSkip = entry.optBoolean("autoSkip",false);
 
                 String diffLetterSound = entry.optString("letterSound",null);
 
-                storyEntries.add(new StoryHolder(text, background,animation,transitionAnimation, music,storyOption,storyOptionLink,storyOptionImage,storyOptionPressedImage,storyOption1,storyOptionLink1,storyOptionImage1,storyOptionPressedImage1,storyOption2,storyOptionLink2,storyOptionImage2,storyOptionPressedImage2,diffLetterSound));
+                storyEntries.add(new StoryHolder(text, background,animation,transitionAnimation, music,storyOption,storyOptionLink,storyOptionImage,storyOptionPressedImage,storyOption1,storyOptionLink1,storyOptionImage1,storyOptionPressedImage1,storyOption2,storyOptionLink2,storyOptionImage2,storyOptionPressedImage2,diffLetterSound,autoSkip));
             }
         } catch (Exception e) {
             e.printStackTrace();

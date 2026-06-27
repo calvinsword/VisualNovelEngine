@@ -173,6 +173,7 @@ public class Buttons {
         }
         beginButton.addActionListener(e -> {
             GamePlayer.setJsonLink(config.storyJsonFileLink);
+            SoundHandler.playSoundEffect(config.buttonSound);
             GamePlayer.setCurrentTextIndex(new int[]{0}); // Start from the first text
             GamePlayer.storyEntries = new ArrayList<>(); // Clear old story entries
             GamePlayer.reloadStory(panel); // Reload from config file

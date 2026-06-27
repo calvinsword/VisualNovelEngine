@@ -16,15 +16,19 @@ public class Sliders {
         return textSpeedSlider;
     }
     public JSlider newMainVolumeSlider() throws Exception {
-        // Volume Slider with custom UI
         JSlider volumeSlider = createCustomSlider(0, 100, Game.getMasterVolume());
+
         volumeSlider.addChangeListener(e -> {
             int newMasterVolume = volumeSlider.getValue();
             Game.setMasterVolume(newMasterVolume);
-            SoundHandler.setBackgroundMusicVolume(newMasterVolume); // Adjust music volume
+
+            // Force immediate volume update
+            SoundHandler.setBackgroundMusicVolume(newMasterVolume);
         });
+
         return volumeSlider;
     }
+
 
 
     private static JSlider createCustomSlider(int min, int max, int value) throws Exception {
@@ -42,7 +46,9 @@ public class Sliders {
 
             @Override
             public void paintThumb(Graphics g) {
-                g.drawImage(thumbIcon.getImage(), thumbRect.x, thumbRect.y, thumbRect.width, thumbRect.height, null);
+                int x = thumbRect.x + (thumbRect.width - thumbIcon.getIconWidth()) / 2;
+                int y = thumbRect.y + (thumbRect.height - thumbIcon.getIconHeight()) / 2;
+                g.drawImage(thumbIcon.getImage(), x, y, null);
             }
 
             @Override
@@ -50,6 +56,10 @@ public class Sliders {
                 int trackWidth = trackRect.width;
                 int trackHeight = trackRect.height;
                 g.drawImage(trackIcon.getImage(), trackRect.x, trackRect.y, trackWidth, trackHeight, null);
+            }
+            @Override
+            protected Dimension getThumbSize() {
+                return new Dimension(thumbIcon.getIconWidth(), thumbIcon.getIconHeight());
             }
 
             @Override

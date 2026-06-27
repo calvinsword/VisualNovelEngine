@@ -13,7 +13,7 @@
     {"text" : "clean."},
     {"text" : "serve.","transitionAnimation" : "TRANSITION7","animation" : "WORK7"},
     {"text" : "beer."},
-    {"text" : "ow... its already the end..."},
+    {"text" : "ow... already done?", "music" : "res/Sounds/nightlife.wav"},
     {"text" : "time flies when, when.. i am drunk..."},
     {"text" : "","story option" : "AGAIN?","story option link" : "res/Story/Intro/Intro4.json"}
   ]

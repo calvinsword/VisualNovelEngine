@@ -21,8 +21,9 @@ public class StoryHolder {
     private final String storyOptionImagePressed2;
 
     private final String diffLetterSound;
+    private final boolean autoSkip;
 
-    public StoryHolder(String text, String background, String animation,String transitionAnimation, String music, String storyOption, String storyOptionJsonLink, String storyOptionImage, String storyOptionImagePressed, String storyOption1, String storyOptionJsonLink1, String storyOptionImage1, String storyOptionImagePressed1, String storyOption2, String storyOptionJsonLink2, String storyOptionImage2, String storyOptionImagePressed2, String difflettersound) {
+    public StoryHolder(String text, String background, String animation,String transitionAnimation, String music, String storyOption, String storyOptionJsonLink, String storyOptionImage, String storyOptionImagePressed, String storyOption1, String storyOptionJsonLink1, String storyOptionImage1, String storyOptionImagePressed1, String storyOption2, String storyOptionJsonLink2, String storyOptionImage2, String storyOptionImagePressed2, String difflettersound,boolean autoSkip) {
         this.text = text;
         this.background = background;
         this.animation = animation;
@@ -41,6 +42,7 @@ public class StoryHolder {
         this.storyOptionImage2 = storyOptionImage2;
         this.storyOptionImagePressed2 = storyOptionImagePressed2;
         this.diffLetterSound = difflettersound;
+        this.autoSkip = autoSkip;
     }
 
     public String getText() {
@@ -81,4 +83,5 @@ public class StoryHolder {
     public String getStoryOptionImage2() {return storyOptionImage2;}
     public String getStoryOptionImagePressed2() {return storyOptionImagePressed2;}
     public String getDiffLetterSound(){return diffLetterSound;}
+    public boolean getAutoSkip(){return autoSkip;}
 }

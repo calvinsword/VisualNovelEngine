@@ -26,11 +26,12 @@ public class MainScreen {
     }
 
     public static void mainScreen(JLayeredPane panel) throws Exception {
+        Config config = Config.getInstance();
         panel.removeAll(); // Clear previous content
         panel.setLayout(null); // Use absolute positioning for precise control
-        TextDisplay textDisplay;
-
-        Config config = Config.getInstance();
+        if (config.mainMenuSound != null) {
+            playBackgroundMusic(config.mainMenuSound);
+        }
         if (config.mainMenuImage != null){
             Game.setCurrentBackgroundImage(config.mainMenuImage);
         } else if (config.mainMenuAnimation != null) {

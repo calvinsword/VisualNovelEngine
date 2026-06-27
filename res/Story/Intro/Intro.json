@@ -22,9 +22,9 @@
   {"text" : "it always brings me at ease. That fact alone scares me."},
   {"text" : "i dont wanna become dependent on alcohol."},
   {"text" : "although..."},
-  {"text" : "am i already dependent?"},
-  {"text" : "is it already to late?"},
-  {"text" : "is this the reason i still put up with this work?"},
+  {"text" : "i feel like i am already dependent"},
+  {"text" : "cant remember the last time i was sober for more than two days"},
+  {"text" : "..."},
   {"text" : "","story option" : "You're pathetic","story option link" : "res/Story/Intro/Intro2.json"}
   ]
 }
